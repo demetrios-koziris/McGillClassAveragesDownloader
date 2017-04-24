@@ -57,7 +57,7 @@ function averageGPAsDownloader() {
 					for (let r = 0; r < transcript.length; r++) {
 						let cols = transcript[r].getElementsByClassName('fieldmediumtext');
 						if (cols.length === 1) {
-							let termMatch = cols[0].innerHTML.match(/\<b\>(Fall|Winter|Summer)\&nbsp\;([0-9]{4})\<\/b\>/);
+							let termMatch = cols[0].innerHTML.match(/\<b\>(Fall|Winter|Summer)\&nbsp\;20([0-9]{2})\<\/b\>/);
 							if (termMatch) {
 								term = termMatch[1][0] + termMatch[2];
 								logForDebug(term);
@@ -65,7 +65,8 @@ function averageGPAsDownloader() {
 						}
 						else if (cols.length === 8 || cols.length === 7) {
 							if (cols[cols.length-1].innerText.match(/[ABCDF+-]/)) {
-								aveGPAs.push([cols[0].innerText, cols[cols.length-1].innerText, term, cols[3].innerText]);
+								let course = cols[0].innerText.split(" ");
+								aveGPAs.push([course[0], course[1], cols[cols.length-1].innerText, term, cols[3].innerText]);
 							}
 						} 
 					}
