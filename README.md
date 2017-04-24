@@ -1,3 +1,3 @@
 # McGillClassAveragesDownloader
-A tool to download class averages for crowd-sourcing purposes
-
+### A Chrome Extension helping McGill students crowd-source a class average database.
+This extension allows McGill students to download the class averages from their transcript as a spreadsheet instead of copying them manually.
