@@ -8,6 +8,12 @@ let logForDebug = ( devMode ? console.log.bind(window.console) : function(){} );
 logForDebug("McGill Class Averages Downloader Debug mode is ON");
 
 if (url.match(/.+demetrios\-koziris\.github\.io\/McGillClassAveragesDownloader/)) {
+
+	let requiresParagraph = document.getElementById('requires-extension');
+	requiresParagraph.style.display = 'none';
+	let downloadButton = document.getElementById('mcad-avegpa-download');
+	downloadButton.style.display = 'inline';
+
 	averageGPAsDownloader();
 }
 
