@@ -49,7 +49,8 @@ function averageGPAsDownloader() {
 					redirect(notloggedinMessage, minervaLogin);
 				}
 				else {
-					let transcript = htmlDoc.getElementsByClassName('dataentrytable')[1].rows;
+					let dataTables = htmlDoc.getElementsByClassName('dataentrytable')
+					let transcript = dataTables[dataTables.length-1].rows;
 					logForDebug(transcript);
 					let aveGPAs = [];
 					let term = "";
