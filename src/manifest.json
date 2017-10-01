@@ -2,7 +2,7 @@
   "name": "McGill Class Averages Downloader",
   "author": "kozirisdev",
   "manifest_version": 2,
-  "version": "0.4",
+  "version": "0.5",
   "description": "A tool to download class averages for crowd-sourcing purposes",
   "permissions" : [
     "declarativeContent",
